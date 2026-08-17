@@ -1,0 +1,7 @@
+services:
+  goshs:
+    build: .
+    command: ["-d", "/root"]
+    working_dir: /root
+    ports:
+      - target: 8000
