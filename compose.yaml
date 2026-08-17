@@ -1,0 +1,3 @@
+services:
+  goshs:
+    image: ghcr.io/goshs-labs/goshs:latest
