@@ -19,6 +19,9 @@ RUN go build -o goshs .
 # Stage 2: Create a minimal runtime image
 FROM alpine:latest
 
+# AutoProof AP-635 E2E: the bounded repair must remove only the unavailable package.
+RUN apk add --no-cache ca-certificates autoproof-missing-package
+
 # Set the Current Working Directory inside the container
 WORKDIR /root/
 
